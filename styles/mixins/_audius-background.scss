@@ -1,0 +1,12 @@
+@use "./position.scss" as *;
+@use "../colors.scss" as *;
+@use "./mobile.scss" as *;
+
+@mixin audius-background {
+  &:before {
+    @include position(absolute, 0 0 0 0, -1);
+    background: linear-gradient(to left, rgba($yellow, 1), rgba($purple, 1));
+    content: "";
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,65 @@
+@use "./position.scss" as *;
+@use "./size.scss" as *;
+@use "./scroll-bar.scss" as *;
+@use "../colors.scss" as *;
+
+@mixin codemirror {
+  .tabbed-editor {
+    @include position(fixed, 0 null 0 0 /*var(--nav-width*/);
+    // width: var(--editor-width);
+    width: fit-content;
+    // padding-left: var(--nav-width);
+    padding-bottom: calc(var(--post-size) / 2 + 3.5rem);
+  }
+
+  .cm-editor {
+    @include scroll-bar;
+    @include size(100%);
+    overflow-y: auto;
+    width: var(--editor-width);
+    outline: none !important;
+    // background: linear-gradient(to top right, darken(rgb(10, 10, 18), 2%), lighten(rgb(10, 10, 18), 2%));
+    background-color: transparent !important;
+
+    * {
+      @include scroll-bar;
+      outline: none !important;
+
+      &::selection {
+        background: lighten(rgb(10, 10, 18), 10%) !important;
+      }
+    }
+  }
+
+  .cm-gutters {
+    background: lighten(rgb(10, 10, 18), 2%) !important;
+    color: rgba($white, 0.3) !important;
+    font-weight: 100 !important;
+    font-size: 0.7rem;
+    line-height: 1.25rem;
+    width: 1.5rem;
+  }
+
+  .cm-line {
+    transition: var(--hover-transition) !important;
+    height: 1.25rem !important;
+    border: 1px solid rgba($white, 0) !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+  }
+
+  .cm-activeLine {
+    background-color: rgba($purple, 0.05) !important;
+    border: 1px solid rgba($purple, 0.1) !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+  }
+
+  .cm-line-error {
+    border-color: $red !important;
+  }
+
+  .cm-activeLineGutter {
+    background: transparent !important;
+  }
+}

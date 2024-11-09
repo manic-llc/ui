@@ -1,0 +1,16 @@
+// https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
+
+@mixin vertical-rhythm($multiplier: 1, $root: false) {
+  $prop: margin-top;
+  $value: calc(#{$multiplier} * var(--spacer));
+
+  @if $root == true {
+    > * + * {
+      #{$prop}: $value;
+    }
+  } @else {
+    * + * {
+      #{$prop}: $value;
+    }
+  }
+}

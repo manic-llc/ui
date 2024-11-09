@@ -1,0 +1,33 @@
+@use './scroll-bar' as *;
+
+@mixin reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-weight: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: transparent;
+    border: 0;
+
+    @include scroll-bar;
+  }
+
+  a {
+    text-decoration: none;
+    font-style: normal;
+  }
+
+  img,
+  canvas {
+    display: flex;
+  }
+}

@@ -1,0 +1,8 @@
+@mixin position($position, $list, $z-index: initial) {
+  position: $position;
+  top: nth($list, 1);
+  right: nth($list, 2);
+  bottom: nth($list, 3);
+  left: nth($list, 4);
+  z-index: $z-index;
+}

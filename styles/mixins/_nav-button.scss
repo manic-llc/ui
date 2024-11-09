@@ -1,0 +1,40 @@
+@use "./size.scss" as *;
+@use "./flex.scss" as *;
+@use "../colors.scss" as *;
+
+@mixin nav-button {
+  @include size(var(--nav-width));
+  @include flex;
+  transition: var(--hover-transition);
+  position: relative;
+  // box-shadow: var(--box-shadow);
+  background: $black;
+  border: 0;
+  outline: 0;
+
+  &.neon {
+    mix-blend-mode: exclusion;
+  }
+
+  * {
+    transition: var(--hover-transition);
+  }
+
+  &:hover {
+    background: lighten($black, 20%);
+  }
+
+  &.open {
+    background: $pink;
+  }
+
+  :deep(svg) {
+    @include size(calc(var(--nav-width) / 2.5));
+    fill: $white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

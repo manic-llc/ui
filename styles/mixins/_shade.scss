@@ -1,0 +1,11 @@
+@use "./position.scss" as *;
+
+@mixin shade($position: to top right, $col1: var(--purple), $col2: var(--pink)) {
+  &:before {
+    @include position(absolute, 0 0 0 0, 0);
+    content: "";
+    background: linear-gradient($position, $col1, $col2);
+    transition: var(--base-transition);
+    // mix-blend-mode: lighten;
+  }
+}

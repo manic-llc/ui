@@ -1,0 +1,21 @@
+@use "./size.scss" as *;
+@use "./position.scss" as *;
+@use "../colors.scss" as *;
+
+@mixin unsaved {
+  @include size(0.75rem);
+  @include position(absolute, -0.15rem -0.15rem null null, 100);
+  background: linear-gradient(to top right, darken($pink, 10%), lighten($pink, 10%));
+  display: flex;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0rem #{rgba(darken($black, 5%), 1)};
+  opacity: 0;
+  transform: scale(0.5);
+  pointer-events: none;
+  transition: var(--hover-transition);
+
+  &.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,39 @@
+@use "./position.scss" as *;
+@use "./flex.scss" as *;
+@use "./size.scss" as *;
+
+@mixin nav {
+  nav {
+    @include flex(start, start, column);
+    width: var(--nav-width);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+    transition: var(--base-transition);
+
+    &.visible {
+      transform: translateX(0%);
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  a,
+  button {
+    @include size(var(--nav-width));
+    border-radius: 0;
+    padding: 0;
+
+    &:hover,
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  .router-link-active {
+    :deep(svg *) {
+      transition: var(--hover-transition);
+      fill: var(--pink);
+    }
+  }
+}

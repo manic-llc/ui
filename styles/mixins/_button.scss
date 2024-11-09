@@ -1,0 +1,43 @@
+@use "./mobile.scss" as *;
+@use "../colors.scss" as *;
+
+@mixin button(
+  $background: transparent,
+  $text-color: var(--white),
+  $hover-background: transparent,
+  $hover-color: var(--white),
+  $nopad: false
+) {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  background: $background !important;
+  color: $text-color;
+  border: 0;
+  border: 1px solid lighten($black, 20%);
+  border-radius: 50rem;
+  padding: 0 1.25rem;
+  height: 2.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  transition: var(--hover-transition);
+  will-change: transform;
+  text-decoration: none;
+
+  @if $nopad {
+    padding: 0;
+  }
+
+  &:hover {
+    background: $hover-background;
+    color: $hover-color;
+    // transform: scale(1.02);
+  }
+
+  &:active {
+    // transform: scale(0.98);
+    outline: 0;
+  }
+}

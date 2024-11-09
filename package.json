@@ -12,6 +12,8 @@
   },
   "keywords": [
     "ui",
+    "typescript",
+    "vue",
     "utilities",
     "composables",
     "sass"
@@ -21,5 +23,26 @@
   "bugs": {
     "url": "https://github.com/manic-llc/ui/issues"
   },
-  "homepage": "https://github.com/manic-llc/ui#readme"
+  "homepage": "https://github.com/manic-llc/ui#readme",
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.18.2",
+    "@codemirror/commands": "^6.7.1",
+    "@codemirror/lang-html": "^6.4.9",
+    "@codemirror/language": "^6.10.3",
+    "@codemirror/legacy-modes": "^6.4.2",
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/view": "^6.34.2",
+    "codemirror": "^6.0.1",
+    "d3-interpolate": "^3.0.1",
+    "d3-scale": "^4.0.2",
+    "pinia": "^2.2.6",
+    "thememirror": "^2.0.1",
+    "uuid": "^11.0.2",
+    "vue": "^3.5.12"
+  },
+  "devDependencies": {
+    "@types/d3-interpolate": "^3.0.4",
+    "@types/d3-scale": "^4.0.8",
+    "vike": "^0.4.201"
+  }
 }
