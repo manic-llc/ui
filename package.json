@@ -1,0 +1,25 @@
+{
+  "name": "@wearemanic/ui",
+  "version": "1.0.0",
+  "description": "Composable utilities for the front-end.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/manic-llc/ui.git"
+  },
+  "keywords": [
+    "ui",
+    "utilities",
+    "composables",
+    "sass"
+  ],
+  "author": "Zach Winter (zach@manic.llc)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manic-llc/ui/issues"
+  },
+  "homepage": "https://github.com/manic-llc/ui#readme"
+}
